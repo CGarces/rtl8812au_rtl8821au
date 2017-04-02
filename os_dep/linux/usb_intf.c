@@ -164,17 +164,23 @@ static struct usb_device_id rtw_usb_id_tbl[] ={
 	{USB_DEVICE(0x07B8, 0x8812),.driver_info = RTL8812}, /* Abocom - Abocom */
 	{USB_DEVICE(0x2001, 0x3315),.driver_info = RTL8812}, /* D-Link - Cameo */
 	{USB_DEVICE(0x2001, 0x3316),.driver_info = RTL8812}, /* D-Link - Cameo */
-	{USB_DEVICE(0x13b1, 0x003f),.driver_info = RTL8812}, /* Linksys - WUSB6300 */
+	{USB_DEVICE(0x13B1, 0x003F),.driver_info = RTL8812}, /* Linksys - WUSB6300 */
 	{USB_DEVICE(0x2357, 0x0101),.driver_info = RTL8812}, /* TP-Link - T4U */
 	{USB_DEVICE(0x2357, 0x0103),.driver_info = RTL8812}, /* TP-Link - T4UH */
+	/*=== Patched ID ===*/
+	{USB_DEVICE(0x2357, 0x010D),.driver_info = RTL8812}, /* TP-Link - T4U v2 */
+	{USB_DEVICE(0x050D, 0x1109),.driver_info = RTL8812}, /* Belkin F9L1109 - SerComm */
+	{USB_DEVICE(0x20F4, 0x805B),.driver_info = RTL8812}, /* TRENDnet - Cameo */
+	{USB_DEVICE(0x148F, 0x9097),.driver_info = RTL8812}, /* Amped Wireless ACA1 */
+
 #endif
 
 #ifdef CONFIG_RTL8821A
-        /*=== Realtek demoboard ===*/
+	/*=== Realtek demoboard ===*/
 	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0x0811),.driver_info = RTL8821},/* Default ID */
 	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0x0821),.driver_info = RTL8821},/* Default ID */
 	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0x8822),.driver_info = RTL8821},/* Default ID */
-	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0xA811) , .driver_info = RTL8821},/* Default ID */
+	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0xA811),.driver_info = RTL8821},/* Default ID */
 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_REALTEK, 0x0820,0xff,0xff,0xff),.driver_info = RTL8821}, /* 8821AU */
 	{USB_DEVICE_AND_INTERFACE_INFO(USB_VENDER_ID_REALTEK, 0x0823,0xff,0xff,0xff),.driver_info = RTL8821}, /* 8821AU */
 	/*=== Customer ID ===*/
@@ -184,9 +190,17 @@ static struct usb_device_id rtw_usb_id_tbl[] ={
 	{USB_DEVICE(0x2001, 0x3314),.driver_info = RTL8821}, /* D-Link - Cameo */
 	{USB_DEVICE(0x2001, 0x3318),.driver_info = RTL8821}, /* D-Link - Cameo */
 	{USB_DEVICE(0x0E66, 0x0023),.driver_info = RTL8821}, /* HAWKING - Edimax */
-	{USB_DEVICE(0x056E, 0x400E) , .driver_info = RTL8821}, /* ELECOM -  ELECOM */
-	{USB_DEVICE(0x056E, 0x400F) , .driver_info = RTL8821}, /* ELECOM -  ELECOM */
+	{USB_DEVICE(0x056E, 0x400E),.driver_info = RTL8821}, /* ELECOM -  ELECOM */
+	{USB_DEVICE(0x056E, 0x400F),.driver_info = RTL8821}, /* ELECOM -  ELECOM */
 	{USB_DEVICE(0x0846, 0x9052),.driver_info = RTL8821}, /* Netgear - A6100 */
+	/*=== Patched ID ===*/
+	{USB_DEVICE(0x0411, 0x0242),.driver_info = RTL8821}, /* BUFFALO - Edimax */
+	{USB_DEVICE(0x2001, 0x3318),.driver_info = RTL8821}, /* D-Link DWA-172 */
+	{USB_DEVICE(0x056e, 0x4007),.driver_info = RTL8821}, /* Elecom - WDC-433DU2HBK */
+	{USB_DEVICE(0x7392, 0xA813),.driver_info = RTL8821}, /* Edimax - EW-7811UAC */
+	{USB_DEVICE(0x2019, 0xAB32),.driver_info = RTL8821}, /* Planex - GW-450S */
+	{USB_DEVICE(0x0411, 0x025D),.driver_info = RTL8821}, /* BUFFALO WI-U3-866D */
+	{USB_DEVICE(0x04BB, 0x0953),.driver_info = RTL8821}, /* I-O DATA - WN-AC433UA */
 #endif
 
 #ifdef CONFIG_RTL8192E
